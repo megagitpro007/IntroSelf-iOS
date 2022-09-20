@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapSelectImage(_ sender: Any) {
-        
+        self.pickImage(type: .photoLibrary)
     }
     
     @IBAction func didTapChageNamed(_ sender: Any) {
@@ -28,3 +28,24 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UIImagePickerControllerDelegate {
+    
+    func pickImage(type: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = type
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        self.profileImage.image = image
+        dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
