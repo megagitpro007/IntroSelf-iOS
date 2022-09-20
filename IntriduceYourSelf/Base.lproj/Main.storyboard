@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IntriduceYourSelf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Oa6-Zv-2rQ">
+                                <rect key="frame" x="87" y="174" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Oa6-Zv-2rQ" secondAttribute="height" multiplier="1:1" id="H3a-Dp-hOy"/>
+                                    <constraint firstAttribute="width" constant="240" id="h2l-mF-yUU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vua-iu-IUY">
+                                <rect key="frame" x="162.5" y="434" width="89" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Select Image"/>
+                                <connections>
+                                    <action selector="didTapSelectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxO-5p-HTN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Parker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXR-uf-0EV">
+                                <rect key="frame" x="20" y="94" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XXV-fr-ZeQ">
+                                <rect key="frame" x="140.5" y="504" width="133" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmZ-E9-FcM">
+                                <rect key="frame" x="158.5" y="558" width="97" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Change Name"/>
+                                <connections>
+                                    <action selector="didTapChageNamed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZwD-Y7-3Se"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.82717394899473828" green="0.82717394899473828" blue="0.82717394899473828" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PmZ-E9-FcM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTP-fP-X9c"/>
+                            <constraint firstItem="vua-iu-IUY" firstAttribute="top" secondItem="Oa6-Zv-2rQ" secondAttribute="bottom" constant="20" id="HwJ-zo-6C9"/>
+                            <constraint firstItem="Oa6-Zv-2rQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IhT-Qv-mJT"/>
+                            <constraint firstItem="vua-iu-IUY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J5R-lI-BRf"/>
+                            <constraint firstItem="PmZ-E9-FcM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JKC-tw-6nh"/>
+                            <constraint firstItem="XXV-fr-ZeQ" firstAttribute="top" secondItem="vua-iu-IUY" secondAttribute="bottom" constant="40" id="S7G-yI-vsP"/>
+                            <constraint firstItem="XXV-fr-ZeQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tl4-n0-Bfo"/>
+                            <constraint firstItem="Oa6-Zv-2rQ" firstAttribute="top" secondItem="sXR-uf-0EV" secondAttribute="bottom" constant="20" id="YmP-HZ-fuM"/>
+                            <constraint firstItem="sXR-uf-0EV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g7m-iw-iPn"/>
+                            <constraint firstItem="PmZ-E9-FcM" firstAttribute="top" secondItem="XXV-fr-ZeQ" secondAttribute="bottom" constant="20" id="uxl-aR-TFI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sXR-uf-0EV" secondAttribute="trailing" constant="20" id="vHe-eX-l2y"/>
+                            <constraint firstItem="sXR-uf-0EV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="yxp-LZ-HMK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="sXR-uf-0EV" id="yh6-e8-F3f"/>
+                        <outlet property="profileImage" destination="Oa6-Zv-2rQ" id="kEd-mI-fDq"/>
+                        <outlet property="textfieldName" destination="XXV-fr-ZeQ" id="Wqn-It-JWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="defaultProfile" width="416" height="416"/>
+    </resources>
+</document>
